@@ -106,13 +106,63 @@ print(message)
 
 list_1 = ['History', 'Math', 'Physics', 'CompSci']
 list_2 = list_1
-
+# list examples
 print(list_1)
 print(list_2)
 
-# Immutable
-# tuple_1 = ('History', 'Math', 'Physics', CompSci')
-# tuple_2 = tuple_1
+list_1[0] = 'Art'
 
-# print(tuple_1)
-# print(tuple_2)
+print(list_1)
+print(list_2)
+print(message)
+print(message)
+
+print('Tuples Example')
+# Immutable
+
+tuple_1 = ('History', 'Math', 'Physics', 'CompSci')
+tuple_2 = tuple_1
+
+# to change the tuple with: tuple_1[0] = 'Arts', returns an error function
+# can't modify/mutate the tuple with append etc.
+print(tuple_1)
+print(tuple_2)
+
+print(message)
+print(message)
+print("Sets Notes")
+# Sets have slightly different functionality than lists, Tuples
+
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}
+
+print(cs_courses)
+# the order can change with each execution for the output
+# sets don't care about order
+# used to test if a value is part of a set, or to remove duplicates
+
+print(message)
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}
+art_courses = {'History', 'Math', 'Art', 'Design'}
+print(cs_courses)
+print('Math' in cs_courses)
+print(message)
+
+print(cs_courses.intersection(art_courses))
+print(cs_courses.difference(art_courses))
+
+print(cs_courses.union(art_courses))
+# can combine and not have duplicates with sets vs lists or tuples..
+
+
+# Empty Lists
+empty_list = []
+empty_list = list()
+
+
+# Empty Tuples
+empty_tuple = ()
+empty_tuple = tuple()
+
+# Empty Sets
+# empty_set = {}  # this isn't right! it's a dictionary
+empty_set = set()
