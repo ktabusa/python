@@ -1,3 +1,4 @@
+# Integers Video 3
 num = 3
 
 print(type(num))

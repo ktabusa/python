@@ -1,3 +1,4 @@
+# Lists and Sets Video 4
 courses = ['History', 'Math', 'Physics', 'CompSci']
 
 print(courses)
