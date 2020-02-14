@@ -1,5 +1,5 @@
 
-# Dictionaries
+# Dictionaries Video 5
 # aka key value pairs, hashmaps, or associative arrays
 # creating a student dictionary
 

@@ -88,7 +88,8 @@ num_1 = '100'
 num_2 = '200'
 
 print(num_1 + num_2)
-# this concatentates the numbers, but in order to cast them from a string to an integer we need to perform casting
+# this concatentates the numbers, but in order to cast them
+# from a string to an integer we need to perform casting
 
 num_1 = int(num_1)
 num_2 = int(num_2)
