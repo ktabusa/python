@@ -52,3 +52,33 @@ if user == 'Admin' and logged_in:
     print('Admin Page')
 else:
     print('Bad Credential Page')
+# 7:28
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)
+print(id(a))
+print(id(b))
+# the id's for these two lists is different,
+# if "b=a", then the lists would have the same id
+
+print(a is b)
+print(message)\
+
+# False Values:
+# False
+# None
+# Zero of any numeric type
+# Any empty sequence. For example, '', (), [].
+# Any empty mapping. For example, {}.
+# if a number is not '0', then this will eval to true
+
+condition = {1, 2}
+
+if condition:
+    print('Evaluated to True')
+else:
+    print('Evaluated to False')
+
+# video complete 02/18/20
