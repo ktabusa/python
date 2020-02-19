@@ -87,3 +87,5 @@ print(os.getcwd())
 # can find the file location
 print(os.__file__)
 # dunder = __
+
+# completed 02/19/20
