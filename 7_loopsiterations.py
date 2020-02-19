@@ -32,7 +32,7 @@ x = 0
 
 while x < 10:
     # can replace the conditional value with a value like 'True'
-    # if you enter an infinite loop, you can exit out with control q
+    # if you enter an infinite loop, you can exit out with control-q
     if x == 5:
         break
     print(x)
