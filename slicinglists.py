@@ -46,3 +46,6 @@ print(sample_url[7:])
 
 # # Print the url without the http:// or the top level domain
 print(sample_url[7:-4])
+# snips off the http and .com info by printing the middle
+
+# completed 02/25/20
