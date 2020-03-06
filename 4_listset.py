@@ -1,4 +1,7 @@
 # Lists and Sets Video 4
+# lists and tuples,allow us to work with sequential data,
+# sets are unordered collections of data with no duplicates
+
 courses = ['History', 'Math', 'Physics', 'CompSci']
 
 print(courses)
@@ -70,9 +73,9 @@ print(max(nums))
 print(min(nums))
 print(sum(nums))
 
+print('INDEX')
 
-print(courses.index)
-# wtf does this do
+
 print(courses.index('CompSci'))
 # print(courses.index('Pottery'))
 # 'Pottery' was removed by the pop function earlier and an error was returned
