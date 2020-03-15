@@ -1,4 +1,4 @@
-
+0
 # Dictionaries Video 5
 # aka key value pairs, hashmaps, or associative arrays
 # creating a student dictionary
@@ -24,7 +24,7 @@ print(student.get('phone', 'Not Found'))
 # if you use a second argument to the .get method
 
 
-# student['phone'] = '555-5555'
+student['phone'] = '555-5555'
 # you can update a dictionary value
 print(student.get('phone'))
 

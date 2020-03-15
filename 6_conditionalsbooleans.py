@@ -44,12 +44,14 @@ print(message)
 
 
 user = 'Admin'
-logged_in = True
+logged_in = False
 
 # we can use this to only execute codeif the user is admin, and logged
 
 if user == 'Admin' and logged_in:
     print('Admin Page')
+if not logged_in:
+    print("Please Log In")
 else:
     print('Bad Credential Page')
 # 7:28
@@ -64,7 +66,7 @@ print(id(b))
 # if "b=a", then the lists would have the same id
 
 print(a is b)
-print(message)\
+print(message)
 
 # False Values:
 # False
@@ -74,7 +76,7 @@ print(message)\
 # Any empty mapping. For example, {}.
 # if a number is not '0', then this will eval to true
 
-condition = {1, 2}
+condition = {}
 
 if condition:
     print('Evaluated to True')

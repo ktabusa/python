@@ -3,22 +3,24 @@
 
 nums = [1, 2, 3, 4, 5]
 
-# for num in nums:
-# if num == 3:
-# print('Found')
-# continue
-# print(num)
+for num in nums:
+    if num == 3:
+        print('Found')
+        break
+    print(num)
 # this loops through and prints each number in the list
 # if looking for the number 3
 
+message = ' '
+print(message)
 
 for num in nums:
     for letter in 'abc':
         print(num, letter)
 
-# this provided every combination of the characters
+# this provided every combinati on of the characters
 
-message = ' '
+
 print(message)
 
 for i in range(1, 11):
