@@ -2,7 +2,7 @@
 # Classes and Instances
 # start 03/02/20
 
-# can us a pass statement if you want to leave a class empty
+# can use a pass statement if you want to leave a class empty
 
 # manually setting variables is a pain
 # can auto set up variables with classes
@@ -24,7 +24,7 @@ import datetime
 class Employee:
 
     num_of_emps = 0
-    raise_amount = 1.04
+    raise_amt = 1.04
 
     def __init__(self, first, last, pay):
         self.first = first
@@ -32,7 +32,7 @@ class Employee:
         self.pay = pay
         self.email = first + '.' + last + '@company.com'
 
-        Employee.num_of_emps += 1
+        # Employee.num_of_emps + = 1
 
     def fullname(self):
         return ('{} {}'.format(self.first, self.last))
@@ -42,8 +42,8 @@ class Employee:
 # but class variables are easier to update
 #     self.pay = int(self.pay * 1.04)
 
-    def apply_raise(self):
-        self.pay = int(self.pay * Employee.raise_amount)
+    def apply_raise(cls):
+        cls.pay = int(cls.pay * cls.raise_amt)
 # cannot just insert 'raise_amount' instead of 1.04
 # you need to definte a class, or instance to apply the r_a to
 # can use class (Employee), or instance (self) to apply the r_a
@@ -105,9 +105,9 @@ print(emp_1.pay)
 # Employee.raise_amount()
 
 print(message)
-print(Employee.raise_amount)
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
+print(Employee.raise_amt)
+print(emp_1.raise_amt)
+print(emp_2.raise_amt)
 
 print(message)
 # to print the namespace of emp_1 you can see all attributes
@@ -139,3 +139,75 @@ print(message)
 print('Workday')
 my_date = datetime.date(2016, 10, 14)
 print(Employee.is_workday(my_date))
+
+# started OOP 4 04/09/20
+
+
+class Developer(Employee):
+    raise_amt = 1.10
+
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        self.prog_lang = prog_lang
+
+# didn't take the extra self.first info to keep code clean.
+# the employee init method will take the other aspects.
+# the super().__init__ will take it.
+# can also use Employee.__initi__(self, first, last, pay)
+# super is more necessary if you need to use multiple inheritance
+
+
+dev_1 = Developer('Dev', 'Tomas', 100000, 'Python')
+dev_2 = Developer('Devin', 'Javed', 90000, 'Java')
+
+print(dev_1.pay)
+dev_1.apply_raise()
+print(dev_1.pay)
+#
+# print(dev_1.email)
+# print(dev_2.prog_lang)
+
+# timestamp =
+
+
+class Manager(Employee):
+    def __init__(self, first, last, pay, reports=None):
+        super().__init__(first, last, pay)
+        if reports is None:
+            self.reports = []
+        else:
+            self.reports = reports
+
+    def add_reports(self, rpt):
+        if rpt not in self.reports:
+            self.reports.append(rpt)
+
+    def remove_reports(self, rpt):
+        if rpt in self.reports:
+            self.reports.remove(rpt)
+
+    def print_reports(self):
+        for rpt in self.reports:
+            print('-->', rpt.fullname())
+
+# "None" was used for reports because you shouldn't use mutable objects as
+# default data types
+
+
+mgr_1 = Manager('Sue', 'Smith', 120000, [dev_1])
+#
+# print(mgr_1.email)
+#
+# mgr_1.add_reports(dev_2)
+# mgr_1.print_reports()
+#
+print(' ')
+#
+# mgr_1.remove_reports(dev_1)
+# mgr_1.print_reports()
+
+print(isinstance(mgr_1, Manager))
+print(isinstance(mgr_1, Employee))
+print(isinstance(mgr_1, Developer))
+print(' ')
+print(issubclass(Developer, Employee))

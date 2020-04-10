@@ -10,6 +10,7 @@ for num in nums:
     print(num)
 # this loops through and prints each number in the list
 # if looking for the number 3
+# can also use continue instead of break
 
 message = ' '
 print(message)
