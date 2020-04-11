@@ -49,3 +49,5 @@ print(sample_url[7:-4])
 # snips off the http and .com info by printing the middle
 
 # completed 02/25/20
+
+index = my_list.index('3')

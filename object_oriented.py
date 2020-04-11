@@ -63,6 +63,19 @@ class Employee:
         if day.weekday() == 5 or day.weekday() == 6:
             return False
         return True
+# dunder repr from OOP 5.
+
+    def __repr__(self):
+        return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
+
+    def __str__(self):
+        return '{} - {}'.format(self.fullname(), self.email)
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
+    def __len__(self):
+        return len(self.fullname())
 
 
 emp_1 = Employee('Keenan', 'Tabusa', 50000)
@@ -131,7 +144,6 @@ first, last, pay = emp_str_1.split('-')
 new_emp_1 = Employee.from_string(emp_str_1)
 # this is a from string alternative constructor
 
-
 print(new_emp_1.pay)
 print(new_emp_1.email)
 
@@ -155,7 +167,6 @@ class Developer(Employee):
 # the super().__init__ will take it.
 # can also use Employee.__initi__(self, first, last, pay)
 # super is more necessary if you need to use multiple inheritance
-
 
 dev_1 = Developer('Dev', 'Tomas', 100000, 'Python')
 dev_2 = Developer('Devin', 'Javed', 90000, 'Java')
@@ -211,3 +222,28 @@ print(isinstance(mgr_1, Employee))
 print(isinstance(mgr_1, Developer))
 print(' ')
 print(issubclass(Developer, Employee))
+
+# OOP 5 04/10/20
+# Magic/Dunder Methods
+# see additions to Employee() class above for defining dunder methods
+
+print('OOP 5 Start - Dunder Methods for Employees')
+print(message)
+emp_1 = Employee('Keenan', 'Tabusa', 50000)
+print(emp_1)
+
+print(message)
+
+print(repr(emp_1))
+print(str(emp_1))
+print('Dunder Maths')
+print(int.__add__(1, 2))
+print(str.__add__('a', 'b'))
+print(emp_1 + emp_2)
+
+print(' ')
+# len is basically the same as the __len__()
+print(len('test'))
+print('test'.__len__())
+print(' ')
+print(len(emp_1))
