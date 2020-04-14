@@ -14,7 +14,7 @@ print(my_list[0:8])
 print(my_list[2:-1:2])
 # alternating numbers if the step is 2
 
-print(my_list[-2:1:-2])
+print(my_list[-1:2:-2])
 # in reverse from '8' to 2, the '1' in the second position is not included
 # alternating numbers but in reverse
 
@@ -50,4 +50,4 @@ print(sample_url[7:-4])
 
 # completed 02/25/20
 
-index = my_list.index('3')
+# index = my_list.index('3')
