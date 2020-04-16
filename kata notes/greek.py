@@ -1,3 +1,5 @@
+# test of greek alphabet kata
+
 greek_alphabet = (
     'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta',
     'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu',

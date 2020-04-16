@@ -75,4 +75,7 @@ for num in range(100):
     address = f'{street_num} {street} St., {city} {state} {zip_code}'
 
     email = first.lower() + last.lower() + '@bogusemail.com'
-    print(f'{first} {last}\n{phone}\n{address}')
+
+    # print(f'{first} {last}\n{phone}\n{address}\n{email}\n')
+    # runs but there is an error from windows
+    # https://www.reddit.com/r/learnpython/comments/7c0mzu/unicodeencodeerror_charmap_codec_cant_encode/
