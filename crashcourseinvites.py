@@ -93,3 +93,16 @@ for val in cubes:
     print(val)
 
 # slicing lists in crash course
+
+
+print('Age if - elif - else Testing')
+age = 12
+if age < 4:
+    price = 0
+elif age < 12:
+    price = 5
+else:
+    price = 10
+
+# print("Your admission cost is $" + str(price) + ".")
+print(f'Your admission price is ${price}.')

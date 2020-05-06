@@ -139,3 +139,5 @@ dt_str = 'October 14, 1986'
 
 DT = datetime.datetime.strptime(dt_str, '%B %d, %Y')
 print(DT)
+
+# took 4x video duration

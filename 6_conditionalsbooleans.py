@@ -20,7 +20,7 @@ message = ' '
 
 print(message)
 # language = 'Python'
-language = 'Java'
+language = 'Python'
 
 if language == 'Python':
     print('Language is Python')
@@ -81,6 +81,51 @@ condition = {}
 if condition:
     print('Evaluated to True')
 else:
-    print('Evaluated to False')
+    print('Evaluated to False\n')
 
 # video complete 02/18/20
+
+
+# additional if elif else condition testing form the crash course
+
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pineapple', 'pepperoni']
+requested_toppings = ['mushrooms', 'french fries', 'green peppers']
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print("Adding " + requested_topping + ".")
+    else:
+        print("Sorry, we are out of " + requested_topping + " right now.")
+# this only works if one item is not in the list, if there are more, update
+
+# if 'mushrooms' in requested_toppings:
+#     print("Adding mushrooms.")
+# if 'pepperoni' in requested_toppings:
+#     print('Adding pepperoni.')
+# if 'extra cheese' in requested_toppings:
+#     print("Adding Extra Cheese."
+
+print("\nFinished making you Pizza!")
+
+
+print("Alien Colors")
+alien_color = 'green'
+if alien_color is 'green':
+    print("Player earned 5 points")
+elif alien_color != 'green':
+    print("Player earned 10 Points")
+
+print('\nStages of Life')
+age = 20
+
+
+if age < 2:
+    print('person is a baby')
+elif age >= 2 and age < 4:
+    print('person is a toddler')
+elif age >= 4 and age < 13:
+    print('person is a kid')
+elif age >= 13 and age < 20:
+    print('person is a teen')
+elif age >= 20 and age < 65:
+    print('person is an adult')

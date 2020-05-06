@@ -16,8 +16,8 @@ today = datetime.date.today()
 print(today + datetime.timedelta(days=days_to_go))
 
 print(' ')
-print('Investing Account Maths')
-print('Basic $20 a day Income from $1k to $100k')
+
+print('Basic 2% a day Income from $1k to $100k\n')
 
 start_date = datetime.date.today()
 end_date = start_date
@@ -32,9 +32,6 @@ days_left = math.ceil(income_left / avg_income_day)
 print(f'{days_left} Market Days to Goal')
 print(today + datetime.timedelta(days=days_left))
 
-print(' ')
-print(' ')
-print(' ')
 
 print('2% Compounding Income from $1k to $100k')
 print(' ')
@@ -54,13 +51,13 @@ while acct_balance < 100000:
 
     end_date = end_date + datetime.timedelta(days=1)
 print(' ')
-print(f'Reached goal in {(end_date - start_date).days // 7} weeks')
-print(f'Took {(end_date - start_date).days} days total days the market was open')
+print(f'Reached $100,000 in {(end_date - start_date).days // 7} weeks.')
+print(f'Took {(end_date - start_date).days} total days.')
 
 weekends = (end_date - start_date).days
 weekends = float(weekends)
 weekends = float(weekends / 7)
 weekends = math.floor(weekends) * 2 - 4
-# -4 is to account for the starting day, end day, and the weekend days of the last week
+# -4 is to account for the start, end day, and the weekend days of the partial
 
-print(f'Took {(end_date - start_date).days - weekends} days the market was open')
+print(f'Took {(end_date - start_date).days - weekends} days the stock market was open.')
